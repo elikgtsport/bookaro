@@ -1,0 +1,44 @@
+### Initialize Data
+POST http://localhost:8080/admin/initialization
+
+
+### Catalog
+GET http://localhost:8080/catalog
+
+### Authors
+GET http://localhost:8080/authors
+
+###
+POST http://localhost:8080/orders
+Content-Type: application/json
+
+{
+  "items": [
+    {
+      "bookId": 61,
+      "quantity": 1
+    }
+  ],
+  "recipient": {
+    "name": "Ela",
+    "phone": "123-456-789",
+    "street": "Cwiartki 3/4",
+    "city": "Krakow",
+    "zipCode": "30-150",
+    "email": "ela@gmail.com"
+  }
+}
+
+###
+GET http://localhost:8080/orders
+
+###
+GET http://localhost:8080/uploads/90/file
+
+###
+PUT http://localhost:8080/orders/16/status
+Content-Type: application/json
+
+{
+  "status": "CANCELED"
+}

@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: bookarodb
+    image: postgres:12.4
+    restart: always
+    environment:
+      POSTGRES_DB: bookaro
+      POSTGRS_USER: postgres
+      POSTGRES_PASSWORD: pass
+    ports:
+      - 5432:5432

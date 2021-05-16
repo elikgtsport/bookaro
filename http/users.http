@@ -1,0 +1,30 @@
+POST localhost:8080/users
+Content-Type: application/json
+
+{
+  "username": "mama@gmail.com",
+  "password": "xxx"
+}
+
+###
+// @no-redirect
+POST localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "ela@gmail.com",
+  "password": "xxx"
+}
+###
+POST localhost:8080/login
+Content-Type: application/json
+
+{
+"username": "admin",
+"password": "xxx"
+}
+
+
+###
+GET localhost:8080/orders/119
+
